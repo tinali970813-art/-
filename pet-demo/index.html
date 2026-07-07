@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>毛孩子今日小记 Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro">
+        <div>
+          <p class="eyebrow">女性向 AI 宠物健康与生活助手</p>
+          <h1>把养宠日常，变成更好照顾、更想分享的生活小记</h1>
+          <p class="lead">
+            结合宠物医疗知识库、AI 看护摄像头、周期适配和小红书草稿生成，让女生养宠不再只是打卡，而是有审美、有照护、有表达的日常工具。
+          </p>
+        </div>
+        <div class="intro-actions">
+          <button class="primary-action" data-screen="home">体验原型</button>
+          <button class="ghost-action" data-open-board>查看完整概念图</button>
+        </div>
+      </section>
+
+      <section class="demo-grid">
+        <aside class="story-panel">
+          <div class="panel-card active" data-screen="home">
+            <span>01</span>
+            <strong>今日节奏</strong>
+            <p>首页只保留宠物状态、AI 提醒、生成小记和三个轻入口。</p>
+          </div>
+          <div class="panel-card" data-screen="triage">
+            <span>02</span>
+            <strong>照片问诊</strong>
+            <p>上传照片，多轮追问，结合猫咪/小型犬知识库给分级建议。</p>
+          </div>
+          <div class="panel-card" data-screen="cycle">
+            <span>03</span>
+            <strong>周期适配</strong>
+            <p>根据经期、腰酸、情绪状态自动调整照护任务和省力清单。</p>
+          </div>
+          <div class="panel-card" data-screen="camera">
+            <span>04</span>
+            <strong>AI 看护</strong>
+            <p>摄像头识别异常行为，片段可回放，也能导入今日短片。</p>
+          </div>
+          <div class="panel-card" data-screen="draft">
+            <span>05</span>
+            <strong>小红书草稿</strong>
+            <p>自动套滤镜、配文案和话题标签，直接生成可发布草稿。</p>
+          </div>
+        </aside>
+
+        <section class="phone-stage" aria-label="应用原型">
+          <div class="phone">
+            <div class="phone-top">
+              <span></span>
+              <small>10:28</small>
+              <span></span>
+            </div>
+
+            <article class="screen active" id="home">
+              <header class="app-header">
+                <div>
+                  <p>今天和它的节奏</p>
+                  <h2>豆豆今天很松弛</h2>
+                </div>
+                <button class="icon-button" aria-label="语音输入">声</button>
+              </header>
+
+              <section class="pet-card">
+                <div class="pet-photo cat-visual"></div>
+                <div>
+                  <p>宠物今日状态</p>
+                  <h3>精神不错，软便 1 次</h3>
+                  <div class="mini-row">
+                    <span>吃饭 80%</span>
+                    <span>睡眠 6.8h</span>
+                    <span>活动 42min</span>
+                  </div>
+                </div>
+              </section>
+
+              <button class="hero-button" data-screen="draft">
+                <span>生成今日养宠小记</span>
+                <small>看护短片 + 滤镜 + 文案一次搞定</small>
+              </button>
+
+              <section class="soft-card">
+                <div class="card-title">
+                  <strong>AI 贴心提醒</strong>
+                  <span>知识库</span>
+                </div>
+                <p>先别急，我陪你一步步看。可以上传照片，我会结合便便颜色、频次和精神状态给建议。</p>
+                <button class="inline-action" data-screen="triage">上传照片问诊</button>
+              </section>
+
+              <nav class="quick-nav">
+                <button data-screen="triage">健康小提醒</button>
+                <button data-screen="cycle">周期适配</button>
+                <button data-screen="draft">草稿箱</button>
+              </nav>
+            </article>
+
+            <article class="screen" id="triage">
+              <header class="app-header compact">
+                <button class="back" data-screen="home">←</button>
+                <div>
+                  <p>AI 照片问诊</p>
+                  <h2>上传症状，分级处理</h2>
+                </div>
+              </header>
+              <div class="upload-box">
+                <div class="photo-chip"></div>
+                <div>
+                  <strong>软便照片已上传</strong>
+                  <p>猫咪 · 2 岁 · 已绝育</p>
+                </div>
+              </div>
+              <div class="species">
+                <button class="selected">猫咪</button>
+                <button>小型犬</button>
+                <span>宠物医疗知识库</span>
+              </div>
+              <section class="chat-card">
+                <p class="ai">我懂，先稳住。我们先看颜色、频次和精神状态。</p>
+                <p class="user">今天软便一次，精神还可以。</p>
+                <p class="ai">先停零食和湿粮半天，补水观察。我帮你生成护理清单。</p>
+              </section>
+              <div class="plan-grid">
+                <button class="plan selected">居家观察</button>
+                <button class="plan">明日复查</button>
+                <button class="plan">就近医院</button>
+              </div>
+              <div class="modal-card">
+                <strong>护理清单</strong>
+                <label><input type="checkbox" checked /> 记录便便颜色</label>
+                <label><input type="checkbox" /> 观察饮水状态</label>
+                <label><input type="checkbox" /> 记录精神状态</label>
+                <button class="inline-action">找附近坐诊医生</button>
+              </div>
+            </article>
+
+            <article class="screen" id="cycle">
+              <header class="app-header compact">
+                <button class="back" data-screen="home">←</button>
+                <div>
+                  <p>女生养宠适配</p>
+                  <h2>照护跟着身体节奏走</h2>
+                </div>
+              </header>
+              <section class="cycle-card">
+                <p>经期第 2 天</p>
+                <h3>今晚遛宠强度已调低</h3>
+                <div class="calendar-strip">
+                  <span>一</span><span class="hot">二</span><span>三</span><span>四</span><span>五</span>
+                </div>
+              </section>
+              <div class="setting-row">
+                <span>遛宠强度</span>
+                <input type="range" min="0" max="100" value="36" />
+              </div>
+              <div class="setting-row">
+                <span>提醒频率</span>
+                <input type="range" min="0" max="100" value="48" />
+              </div>
+              <section class="soft-card">
+                <strong>腰酸省力清单</strong>
+                <p>自动喂食器、地面拾便夹、轻量猫砂铲，今天优先推荐不费腰的小工具。</p>
+              </section>
+              <section class="soft-card">
+                <strong>情绪互动小游戏</strong>
+                <p>逗猫棒 3 分钟、零食寻宝、晒太阳陪伴，让它活动，也让你缓下来。</p>
+              </section>
+              <button class="inline-action wide" data-screen="camera">同步到看护计划</button>
+            </article>
+
+            <article class="screen" id="camera">
+              <header class="app-header compact">
+                <button class="back" data-screen="home">←</button>
+                <div>
+                  <p>AI 看护</p>
+                  <h2>低焦虑日常和轻预警</h2>
+                </div>
+              </header>
+              <section class="camera-view">
+                <div class="sun"></div>
+                <div class="pet-shadow"></div>
+                <span>客厅摄像头 · 实时</span>
+              </section>
+              <div class="alert-card">
+                <strong>连续焦躁拆家 12 分钟</strong>
+                <p>已震动提醒，可回放片段确认。</p>
+                <div>
+                  <button>震动提醒</button>
+                  <button>回放片段</button>
+                </div>
+              </div>
+              <section class="timeline">
+                <p><span></span> 14:10 晒太阳伸懒腰</p>
+                <p><span></span> 15:32 饮水一次</p>
+                <p><span></span> 16:18 门口等待</p>
+              </section>
+              <button class="hero-button small" data-screen="draft">
+                <span>导入小记素材</span>
+                <small>自动剪成松弛感短片</small>
+              </button>
+              <p class="privacy">视频本地存储，7 天自动清理</p>
+            </article>
+
+            <article class="screen" id="draft">
+              <header class="app-header compact">
+                <button class="back" data-screen="home">←</button>
+                <div>
+                  <p>今日小记</p>
+                  <h2>一键生成小红书草稿</h2>
+                </div>
+              </header>
+              <section class="video-preview">
+                <div class="clip-card">晒太阳</div>
+                <div class="clip-card">伸懒腰</div>
+                <div class="clip-card">等你回家</div>
+              </section>
+              <div class="filter-row">
+                <button class="selected">柔粉</button>
+                <button>奶油</button>
+                <button>胶片</button>
+              </div>
+              <section class="caption-card">
+                <strong>自动文案</strong>
+                <p>今天我的小猫太会放松了，连尾巴都在替我松弛。</p>
+                <div class="tags">
+                  <span>#女生养宠日常</span>
+                  <span>#松弛感养猫</span>
+                  <span>#毛孩子日记</span>
+                </div>
+              </section>
+              <section class="mutual-card">
+                <strong>同小区女生互助</strong>
+                <div class="mini-row">
+                  <span>深夜急症搭子</span>
+                  <span>寄养互换</span>
+                  <span>洗护拼团</span>
+                </div>
+              </section>
+              <button class="inline-action wide">生成小红书草稿</button>
+            </article>
+
+            <nav class="tabbar">
+              <button class="active" data-screen="home">首页</button>
+              <button data-screen="triage">问诊</button>
+              <button data-screen="camera">看护</button>
+              <button data-screen="draft">社区</button>
+            </nav>
+          </div>
+        </section>
+
+        <aside class="detail-panel">
+          <div class="detail-card">
+            <p class="eyebrow">Demo 亮点</p>
+            <h2 id="detail-title">首页就是主流程</h2>
+            <p id="detail-copy">把日常状态、AI 问诊和一键小记放在同一屏，现场演示时不需要跳很多层。</p>
+          </div>
+          <div class="metric-grid">
+            <div><strong>知识库</strong><span>猫咪 / 小型犬</span></div>
+            <div><strong>周期</strong><span>任务自动降负</span></div>
+            <div><strong>硬件</strong><span>看护片段联动</span></div>
+            <div><strong>分享</strong><span>草稿自动生成</span></div>
+          </div>
+          <div class="board-card">
+            <img src="prototype-board.png" alt="完整产品概念图" />
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <dialog class="board-dialog">
+      <button class="close-board" aria-label="关闭">×</button>
+      <img src="prototype-board.png" alt="完整产品概念图" />
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
